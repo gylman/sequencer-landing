@@ -12,6 +12,7 @@ import rollkit from '../assets/images/rollkit.svg';
 import saga from '../assets/images/saga.svg';
 import stackr from '../assets/images/stackr.svg';
 import vistara from '../assets/images/vistara.svg';
+import { Link } from 'react-router-dom';
 
 const IntroSection = styled.div`
   width: 100%;
@@ -144,6 +145,13 @@ const Cards = styled.div`
   }
 `;
 
+const StyledLink = styled(Link)`
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+`;
+
 const Card = styled.div`
   border-radius: 12px;
   border: 1.5px solid rgba(255, 255, 255, 0.83);
@@ -259,18 +267,21 @@ const GradientLink = styled.p`
 
 const cards = [
   {
+    url: 'https://altlayer.io/',
     logo: altlayer,
     title: 'Altlayer',
     details:
       'AltLayer is an open and decentralized protocol for developers to launch highly elastic application-tailored rollups.',
   },
   {
+    url: 'https://caldera.xyz/',
     logo: caldera,
     title: 'Caldera',
     details:
       'Caldera specializes in building high-performance, customizable, and application-specific layer-two blockchains.',
   },
   {
+    url: 'https://celestia.org/',
     logo: celestia,
     title: 'Celestia',
     details:
@@ -278,47 +289,55 @@ const cards = [
   },
   {
     logo: herodotus,
+    url: 'https://www.herodotus.dev/',
     title: 'Herodotus',
     details:
       'Herodotus is a powerful data access middleware that provides smart contracts with synchronous access to both current and historical on-chain data across Ethereum layers.',
   },
   {
+    url: 'https://lumoz.org/',
     logo: lumoz,
     title: 'Lumoz',
     details:
       'Lumoz (Previously Opside) is a decentralized ZK-RaaS platform as well as a PoW network that facilitates ZKP mining.',
   },
   {
+    url: 'https://www.madara.zone/',
     logo: madara,
     title: 'Madara',
     details:
       'Madara is standard, customizable and blazing fast Starknet sequencer. Madara delivers unmatched performance and scalability to power Starknet-based Validity Rollup chain.',
   },
   {
+    url: 'https://www.pragmaoracle.com/',
     logo: pragma,
     title: 'Pragma',
     details:
       'Pragma is a decentralized, transparent and composable oracle network, leveraging state-of-the-art zero-knowledge cryptography.',
   },
   {
+    url: 'https://rollkit.dev/',
     logo: rollkit,
     title: 'Rollkit',
     details:
       'Rollkit is a rollup framework that gives developers the freedom to deploy rollups throughout the modular stack.',
   },
   {
+    url: 'https://www.saga.xyz/',
     logo: saga,
     title: 'Saga',
     details:
       'Saga is a protocol for automatically provisioning application-specific blockchains.',
   },
   {
+    url: 'https://www.stackrlabs.xyz/',
     logo: stackr,
     title: 'Stackr',
     details:
       'Stackr is a modular SDK for building micro-rollups in general-purpose languages.',
   },
   {
+    url: 'https://www.vistara.dev/',
     logo: vistara,
     title: 'Vistara',
     details:
@@ -354,13 +373,15 @@ const EcoPage = () => {
                 a.title.toUpperCase() > b.title.toUpperCase() ? 1 : -1
               )
               .map((card) => (
-                <Card key={card.title}>
-                  <LogoTitle>
-                    <Logo src={card.logo} />
-                    <CardTitle>{card.title}</CardTitle>
-                  </LogoTitle>
-                  <CardDetails>{card.details}</CardDetails>
-                </Card>
+                <StyledLink to={card.url} target='_blank'>
+                  <Card key={card.title}>
+                    <LogoTitle>
+                      <Logo src={card.logo} />
+                      <CardTitle>{card.title}</CardTitle>
+                    </LogoTitle>
+                    <CardDetails>{card.details}</CardDetails>
+                  </Card>
+                </StyledLink>
               ))}
           </Cards>
         </CardsSectionContent>
