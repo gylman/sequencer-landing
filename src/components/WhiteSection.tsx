@@ -237,6 +237,7 @@ const PurpleWrapper = styled.div`
   background: #291346;
   width: 100%;
   padding-top: 208px;
+  padding-bottom: 200px;
   justify-content: center;
   @media (max-width: 750px) {
     padding: 79px 30px 148px;
