@@ -269,7 +269,7 @@ const NavBar = () => {
           )}
         </NavbarContainer>
       </Sticky>
-      <Backdrop onClick={handleMenu} />
+      {isShown && <Backdrop onClick={handleMenu} />}
     </>
   ) : (
     <CustomNavBar sticky={sticky}>

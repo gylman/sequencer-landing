@@ -48,6 +48,8 @@ const IntroContent = styled.div`
   @media (max-width: 750px) {
     position: relative;
     height: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 `;
 
@@ -218,6 +220,10 @@ const GradientContent = styled.div`
   padding-left: 40px;
   padding-right: 40px;
   width: 100%;
+  @media (max-width: 750px) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 `;
 
 const GradientText = styled.p`
