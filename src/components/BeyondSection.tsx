@@ -35,6 +35,11 @@ const Row = styled.div`
   display: flex;
   align-items: center;
   gap: 124px;
+  @media (max-width: 930px) {
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
   @media (max-width: 750px) {
     flex-direction: column;
     gap: 30px;
@@ -45,6 +50,9 @@ const Body = styled.div`
   display: flex;
   flex-direction: column;
   gap: 121px;
+  @media (max-width: 930px) {
+    justify-content: center;
+  }
   @media (max-width: 750px) {
     gap: 62px;
   }
@@ -53,6 +61,10 @@ const Body = styled.div`
 const DummyImg = styled.img`
   width: 100%;
   height: auto;
+  @media (max-width: 930px) {
+    width: 400px;
+    height: auto;
+  }
   @media (max-width: 750px) {
     width: 315px;
     height: 349px;
@@ -110,7 +122,7 @@ const BeyondSection = () => {
             </Details>
           </TextWrapper>
         </Row>
-        {window.innerWidth > 750 ? (
+        {window.innerWidth > 750 && !(window.innerWidth < 930) ? (
           <Row>
             <TextWrapper>
               <Title>Connecting through a shared layer</Title>

@@ -145,12 +145,17 @@ const Footer = () => {
                   <CardText>Twitter</CardText>
                 </Card>
               </StyledLink>
-              <Card>
-                <img src={discord} /> <CardText>DISCORD</CardText>
-              </Card>
+              <StyledLink
+                to='https://discord.com/invite/wdS6k4wz9H'
+                target='_blank'
+              >
+                <Card>
+                  <img src={discord} /> <CardText>Discord</CardText>
+                </Card>
+              </StyledLink>
               <StyledLink to='https://medium.com/@radius_xyz' target='_blank'>
                 <Card>
-                  <img src={medium} /> <CardText>BLOG</CardText>
+                  <img src={medium} /> <CardText>Blog</CardText>
                 </Card>
               </StyledLink>
             </CardRow>

@@ -342,8 +342,8 @@ const WhiteSection = () => {
               Empowering rollups <Bold>Beyond decentralization</Bold>
             </IntroTitle>
             <IntroSub>
-              A way to build, connect, and scale rollups with one decentralized
-              shared sequencing layer
+              Build, connect, and scale rollups with one decentralized shared
+              sequencing layer
             </IntroSub>
           </IntroWrapper>
         </Content>

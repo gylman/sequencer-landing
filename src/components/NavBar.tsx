@@ -274,7 +274,10 @@ const NavBar = () => {
   ) : (
     <CustomNavBar sticky={sticky}>
       <Content>
-        <img src={sticky ? radius_dark : radius} alt='radius' />
+        <StyledLink to='/' onClick={() => setSticky(false)}>
+          <img src={sticky ? radius_dark : radius} alt='radius' />
+        </StyledLink>
+
         <EcoDocGit>
           <StyledLink to='/ecosystem' onClick={() => setSticky(true)}>
             <EcoBtn>Ecosystem</EcoBtn>

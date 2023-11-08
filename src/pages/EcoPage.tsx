@@ -349,15 +349,19 @@ const EcoPage = () => {
       <CardsSection>
         <CardsSectionContent>
           <Cards>
-            {cards.map((card) => (
-              <Card key={card.title}>
-                <LogoTitle>
-                  <Logo src={card.logo} />
-                  <CardTitle>{card.title}</CardTitle>
-                </LogoTitle>
-                <CardDetails>{card.details}</CardDetails>
-              </Card>
-            ))}
+            {cards
+              .sort((a, b) =>
+                a.title.toUpperCase() > b.title.toUpperCase() ? 1 : -1
+              )
+              .map((card) => (
+                <Card key={card.title}>
+                  <LogoTitle>
+                    <Logo src={card.logo} />
+                    <CardTitle>{card.title}</CardTitle>
+                  </LogoTitle>
+                  <CardDetails>{card.details}</CardDetails>
+                </Card>
+              ))}
           </Cards>
         </CardsSectionContent>
       </CardsSection>
