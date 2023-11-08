@@ -40,7 +40,9 @@ const IntroBackground = styled.img`
 
 const IntroContent = styled.div`
   width: 100%;
-  max-width: 1400px;
+  max-width: 1480px;
+  padding-left: 40px;
+  padding-right: 40px;
   position: absolute;
   top: calc(50%-20px);
   @media (max-width: 750px) {
@@ -104,6 +106,8 @@ const CardsSection = styled.div`
   width: 100%;
   background: #1b191f;
   padding: 250px 0 16px;
+  padding-left: 40px;
+  padding-right: 40px;
   display: flex;
   justify-content: center;
   @media (max-width: 750px) {
@@ -115,6 +119,7 @@ const CardsSectionContent = styled.div`
   display: flex;
   width: 100%;
   max-width: 1400px;
+  justify-content: center;
   @media (max-width: 750px) {
     flex-direction: column;
     align-items: center;
@@ -125,6 +130,11 @@ const Cards = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 19px 18px;
+
+  @media (max-width: 850px) {
+    grid-wrap: wrap;
+    gap: 10px;
+  }
   @media (max-width: 750px) {
     display: flex;
     flex-direction: column;
@@ -204,7 +214,9 @@ const GradientSection = styled.div`
 `;
 
 const GradientContent = styled.div`
-  max-width: 1400px;
+  max-width: 1480px;
+  padding-left: 40px;
+  padding-right: 40px;
   width: 100%;
 `;
 
@@ -242,37 +254,37 @@ const GradientLink = styled.p`
 const cards = [
   {
     logo: altlayer,
-    title: 'ALTLAYER',
+    title: 'Altlayer',
     details:
       'AltLayer is an open and decentralized protocol for developers to launch highly elastic application-tailored rollups.',
   },
   {
     logo: caldera,
-    title: 'caldera',
+    title: 'Caldera',
     details:
       'Caldera specializes in building high-performance, customizable, and application-specific layer-two blockchains.',
   },
   {
     logo: celestia,
-    title: 'CELESTIA',
+    title: 'Celestia',
     details:
       'Celestia is a modular data availability network that securely scales with the number of users, making it easy for anyone to launch their own blockchain.',
   },
   {
     logo: herodotus,
-    title: 'HERODOTUS',
+    title: 'Herodotus',
     details:
       'Herodotus is a powerful data access middleware that provides smart contracts with synchronous access to both current and historical on-chain data across Ethereum layers.',
   },
   {
     logo: lumoz,
-    title: 'LUMOZ',
+    title: 'Lumoz',
     details:
       'Lumoz (Previously Opside) is a decentralized ZK-RaaS platform as well as a PoW network that facilitates ZKP mining.',
   },
   {
     logo: madara,
-    title: 'MADARA',
+    title: 'Madara',
     details:
       'Madara is standard, customizable and blazing fast Starknet sequencer. Madara delivers unmatched performance and scalability to power Starknet-based Validity Rollup chain.',
   },
@@ -290,7 +302,7 @@ const cards = [
   },
   {
     logo: saga,
-    title: 'SAGA',
+    title: 'Saga',
     details:
       'Saga is a protocol for automatically provisioning application-specific blockchains.',
   },
@@ -348,7 +360,7 @@ const EcoPage = () => {
           <GradientText>
             Join Radius in decentralizing and future-proofing Ethereum
           </GradientText>
-          <a href='https://twitter.com/radius_xyz'>
+          <a href='https://twitter.com/radius_xyz' target='_blank'>
             <GradientLink>Talk to us</GradientLink>
           </a>
         </GradientContent>

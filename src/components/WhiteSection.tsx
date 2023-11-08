@@ -38,7 +38,6 @@ const LabWrapper = styled.div`
 `;
 
 const VideoWrapper = styled.div`
-  width: 100%;
   @media (max-width: 750px) {
     height: 100%;
   }
@@ -47,7 +46,7 @@ const VideoWrapper = styled.div`
 const StyledVideo = styled.video`
   width: 100%;
   height: auto;
-  border-radius: 20px;
+ border-radius: 20px;
   // transform: rotateY(180deg);
   // -webkit-transform: rotateY(180deg); /* Safari and Chrome */
   // -moz-transform: rotateY(180deg); /* Firefox */
@@ -71,7 +70,9 @@ const StyledVideo = styled.video`
 
 const Content = styled.div`
   width: 100%;
-  max-width: 1400px;
+  max-width: 1480px;
+  padding-left: 40px;
+  padding-right: 40px;
   position: absolute;
   height: 100%;
   @media (max-width: 750px) {
@@ -154,15 +155,21 @@ const EcoWrapper = styled.div`
 const EcoContent = styled.div`
   display: flex;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1480px;
+  padding-left: 40px;
+  padding-right: 40px;
   justify-content: space-between;
+  @media (max-width: 750px) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 `;
 
 const Eco = styled.div`
   width: auto;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
   align-items: flex-start;
   max-width: 972px;
   @media (max-width: 750px) {
@@ -195,13 +202,33 @@ const Details = styled.p`
   }
 `;
 
+const StyledLink = styled(Link)`
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+  width: auto;
+`;
+
+const Button = styled.button`
+  border: none;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+  }
+  @media (max-width: 750px) {
+    position: absolute;
+    right: 30px;
+  }
+`;
+
 const Arrow = styled.img`
-  margin-left: 260px;
+  // margin-left: 260px;
   @media (max-width: 750px) {
     margin-left: 0px;
     width: 33px;
-    position: absolute;
-    right: 30px;
   }
 `;
 
@@ -209,7 +236,7 @@ const PurpleWrapper = styled.div`
   display: flex;
   background: #291346;
   width: 100%;
-  padding: 208px 10px;
+  padding-top: 208px;
   justify-content: center;
   @media (max-width: 750px) {
     padding: 79px 30px 148px;
@@ -218,11 +245,17 @@ const PurpleWrapper = styled.div`
 
 const PurpleContent = styled.div`
   display: flex;
-  max-width: 1400px;
+  max-width: 1480px;
+  padding-left: 40px;
+  padding-right: 40px;
   width: 100%;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  @media (max-width: 750px) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 `;
 
 const TrueToDec = styled.p`
@@ -252,13 +285,6 @@ const BuiltIn = styled.div`
     font-size: 24px;
     margin-bottom: 15px;
   }
-`;
-
-const StyledLink = styled(Link)`
-  display: flex;
-  text-decoration: none;
-  color: inherit;
-  width: auto;
 `;
 
 type Card = {
@@ -332,7 +358,9 @@ const WhiteSection = () => {
             </Details>
           </Eco>
           <StyledLink to='/ecosystem'>
-            <Arrow src={arrow} alt='arrow_right' />
+            <Button>
+              <Arrow src={arrow} alt='arrow_right' />
+            </Button>
           </StyledLink>
         </EcoContent>
       </EcoWrapper>

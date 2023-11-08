@@ -4,7 +4,9 @@ import connecting from '../assets/images/connecting.svg';
 
 const MainContainer = styled.div`
   display: flex;
-  max-width: 1400px;
+  max-width: 1480px;
+  padding-left: 40px;
+  padding-right: 40px;
   width: 100%;
   margin-top: 290px;
   flex-direction: column;
